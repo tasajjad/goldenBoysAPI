@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "This is personal social media application for golden boys or our village members ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tasajjad/golden_boys-API-.git"
+  },
+  "keywords": [
+    "tasajjad"
+  ],
+  "author": "Sajjad Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tasajjad/golden_boys-API-/issues"
+  },
+  "homepage": "https://github.com/tasajjad/golden_boys-API-#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  }
+}
