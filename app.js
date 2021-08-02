@@ -5,8 +5,11 @@ const dotenv = require('dotenv')
 const morgan = require('morgan')
 dotenv.config()
 
-// internal import
+/**
+ * @internal import 
+ */
 
+const userRouter = require('./routers/userRouter')
 const notFound = require('./errors/notFound')
 const defaultError = require('./errors/defaultError')
 
@@ -15,6 +18,8 @@ app.use(cors())
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'));
 }
+
+app.use('/api/user/auth', userRouter)
 
 app.use(notFound)
 app.use(defaultError)
