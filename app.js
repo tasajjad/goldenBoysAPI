@@ -10,6 +10,7 @@ dotenv.config()
  */
 
 const userRouter = require('./routers/userRouter')
+const postRouter = require('./routers/postRoute')
 const notFound = require('./errors/notFound')
 const defaultError = require('./errors/defaultError')
 
@@ -20,6 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/api/user/auth', userRouter)
+app.use('/api/user/', postRouter)
 
 app.use(notFound)
 app.use(defaultError)
